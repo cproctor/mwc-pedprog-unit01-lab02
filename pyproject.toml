@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "mwc-pedprog-unit01-lab02"
+name = "weather"
 version = "0.1.0"
 description = ""
 authors = ["Chris <github.com@accounts.chrisproctor.net>"]
@@ -7,9 +7,14 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.9"
+requests = "^2.27.1"
+geocoder = "^1.38.1"
 
 [tool.poetry.dev-dependencies]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+weather = "weather.weather_cli:weather_cli"
