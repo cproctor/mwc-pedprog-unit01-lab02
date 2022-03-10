@@ -24,9 +24,10 @@ def geocode_location(location_string):
         lat, lng = result.latlng
         return {'lat': lat, 'lng': lng}
 
-def geocode_ip_address(ip_address=None):
-    """Translates an IP address into latitude and longitude coodrdinates. 
-    When no IP address is provided, uses the user's current IP address.
+def estimate_location(ip_address=None):
+    """Estimates a location based on the request's IP address, returning
+    latitude and longitude coodrdinates. When no IP address is provided, 
+    uses the user's current IP address.
 
         >>> geocode_ip_address()
         {'lat': 23.6585116, 'lng': -102.0077097}
